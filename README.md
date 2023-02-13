@@ -1,10 +1,16 @@
 # Kameleoon Trial Task Documentation
 
+[General](#general)
+
 [Accounts API](#accounts)
 
 [Quotes API](#quotes)
 
 [Votes API](#votes)
+
+## General
+
+
 
 ## Accounts
 
