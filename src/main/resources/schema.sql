@@ -1,4 +1,4 @@
-CREATE TABLE account(
+CREATE TABLE IF NOT EXISTS account(
                         id int PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
                         login varchar UNIQUE NOT NULL CHECK(length(login) >= 2 AND length(login) <= 100),
                         user_password varchar NOT NULL,
@@ -7,7 +7,7 @@ CREATE TABLE account(
                         created_at TIMESTAMP
 );
 
-CREATE TABLE quote(
+CREATE TABLE IF NOT EXISTS quote(
                         id int PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
                         content varchar NOT NULL CHECK(length(content) >= 1 AND length(content) <= 300),
                         votes int,

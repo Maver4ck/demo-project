@@ -1,5 +1,7 @@
 package com.dstreltsov.testtask.model;
 
+import org.hibernate.envers.Audited;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -7,7 +9,7 @@ import java.util.Date;
  * Quote table.
  *
  * @author dstreltsov
- * @since 11.02.2023
+ * @since 12.02.2023
  */
 @Entity
 @Table
@@ -22,6 +24,7 @@ public class Quote {
     private String content;
 
     @Column
+    @Audited
     private Integer votes;
 
     @Column(name = "updated_at")

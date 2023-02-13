@@ -11,7 +11,7 @@ import org.springframework.validation.Validator;
  * Account validator implementation.
  *
  * @author dstreltsov
- * @since 11.02.2023
+ * @since 13.02.2023
  */
 @Component
 public class AccountValidator implements Validator {

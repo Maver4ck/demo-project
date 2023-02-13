@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 /**
  * Controller exception handler.
  * @author dstreltsov
- * @since 11.02.2023
+ * @since 13.02.2023
  */
 @ControllerAdvice
 @ResponseBody
