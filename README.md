@@ -409,6 +409,7 @@ Response:
 }
 ```
 After decoding it will look as in example:
+
 ![image](https://user-images.githubusercontent.com/40277106/218442501-43bee6e1-28e4-41d3-a4f2-9e5b11eb3625.png)
 
 #### Request Parameters
