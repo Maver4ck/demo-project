@@ -1,7 +1,9 @@
 # Kameleoon Trial Task Documentation
 
 [Accounts API](#accounts)
+
 [Quotes API](#quotes)
+
 [Votes API](#votes)
 
 ## Accounts
