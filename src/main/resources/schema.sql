@@ -1,3 +1,6 @@
+DROP TABLE IF EXISTS quote;
+DROP TABLE IF EXISTS account;
+
 CREATE TABLE IF NOT EXISTS account(
                         id int PRIMARY KEY AUTO_INCREMENT UNIQUE NOT NULL,
                         login varchar UNIQUE NOT NULL CHECK(length(login) >= 2 AND length(login) <= 100),
