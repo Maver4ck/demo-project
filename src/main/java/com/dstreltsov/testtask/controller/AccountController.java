@@ -55,6 +55,9 @@ public class AccountController {
     @PostMapping("/edit")
     public AccountDTO editAccount(@RequestBody @Valid AccountDTO accountDTO, BindingResult bindingResult) {
         Account accountToEdit = convertToAccount(accountDTO);
+        if (accountToEdit.getBirthYear() == null) {
+            bindingResult.rejectValue("birthYear", "Birth year cannot be empty.");
+        }
 
         Optional<Account> optional = accountService.findByLogin(accountToEdit.getLogin());
         if (optional.isPresent()) {

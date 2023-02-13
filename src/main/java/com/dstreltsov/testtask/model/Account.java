@@ -1,5 +1,7 @@
 package com.dstreltsov.testtask.model;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -37,6 +39,7 @@ public class Account implements Serializable {
     private Date createdAt;
 
     @OneToMany(mappedBy = "owner")
+    @Cascade(org.hibernate.annotations.CascadeType.REMOVE)
     List<Quote> quotes;
 
     public Account() {

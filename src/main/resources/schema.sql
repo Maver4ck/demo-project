@@ -13,5 +13,5 @@ CREATE TABLE IF NOT EXISTS quote(
                         votes int,
                         created_at TIMESTAMP,
                         updated_at TIMESTAMP,
-                        owner varchar REFERENCES account(login)
+                        owner varchar REFERENCES account(login) ON DELETE CASCADE
 );
