@@ -1,5 +1,9 @@
 # Kameleoon Trial Task Documentation
 
+[Accounts API](#accounts)
+[Quotes API](#quotes)
+[Votes API](#votes)
+
 ## Accounts
 
 The following API allows to process all standard CRUD operations with Accounts.
@@ -417,3 +421,40 @@ After decoding it will look as in example:
 | name          | type          | required | description      |
 | ------------- | ------------- |:--------:| ---------------- |
 | id            | number(int)   | Y        | unique quote ID  |
+
+## Votes
+
+The following API allows to either upvote or downvote a quote.
+
+Request:
+```http
+POST /api/vote/up
+Content-type: application/json
+
+{
+    "quoteId": "22"
+}
+```
+
+Request:
+```http
+POST /api/vote/down
+Content-type: application/json
+
+{
+    "quoteId": "22"
+}
+```
+
+Response:
+```http
+{
+    "message": "Vote counted."
+}
+```
+
+#### Request Fields
+
+| name          | type          | required | description      |
+| ------------- | ------------- |:--------:| ---------------- |
+| quoteId       | number(int)   | Y        | unique quote ID  |
