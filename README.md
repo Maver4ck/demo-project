@@ -10,7 +10,37 @@
 
 ## General
 
+The shortest way to run a project is to use docker image. Run the following commands to succeed.
 
+```shell
+docker pull maver4ck/dstreltsov-trial-task
+```
+
+```shell
+docker run -dp 8080:8080 maver4ck/dstreltsov-trial-task
+```
+
+After that, application will be available at port 8080. To access database console - use http://localhost:8080/h2-console with JDBC URL jdbc:h2:mem:db and username sa.
+
+Another way is to use git clone and running docker inside the project.
+
+After cloning project to your local repository, run the following commands (checked in WSL2).
+
+```shell
+cd demo-project/
+```
+
+In my case, I had maven installed so I ran using mvn command. 
+```shell
+mvn clean package -DskipTests
+```
+Create docker image
+```shell
+docker build -t test-task-docker.jar .
+```
+```shell
+docker run --name app -dp 8080:8080 test-task-docker.jar
+```
 
 ## Accounts
 
