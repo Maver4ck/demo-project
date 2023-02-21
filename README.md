@@ -1,4 +1,4 @@
-# Kameleoon Trial Task Documentation
+# Quotes&Votes Trial Task Documentation
 
 [General](#general)
 
